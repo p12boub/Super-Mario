@@ -35,6 +35,8 @@ body {
 
 			this.load.tilemap('level', 'assets/MyMap.json', null,
 					Phaser.Tilemap.TILED_JSON);
+			this.score=0;
+        this.scoreText='';
 		}
 
 		function create() {
@@ -83,6 +85,8 @@ body {
 			game.camera.follow(player);
 
 			cursors = game.input.keyboard.createCursorKeys();
+			
+			this.scoreText = game.add.text(0, 180, 'Score: 0', {fontSize: '32px', fill: 'red'});
 		}
 
 		function update() {
@@ -126,7 +130,18 @@ body {
 		function coinOverlap(player, coin) {
 			coin.kill();
 		}
+eatcoin: function (mario, coin) {
 
+            coin.kill();
+		this.score += 10;
+    this.scoreText.text = 'Score: ' + this.score;
+
+            if (this.coins.total === 0)
+            {
+                this.coins.callAll('revive');
+            }
+
+        },
 		function goombaOverlap(player, goomba) {
 			if (player.body.touching.down) {
 				goomba.animations.stop();
