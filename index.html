@@ -131,7 +131,11 @@ body {
 
 		function coinOverlap(player, coin) {
 			coin.kill();
+			score = score + 1;
+            		tscore.text = "SCORE : " + score;
+            		game.coins.play();
 		}
+
 
 		function goombaOverlap(player, goomba) {
 			if (player.body.touching.down) {
