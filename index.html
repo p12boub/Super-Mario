@@ -45,6 +45,7 @@ body {
 			this.load.audio("coin", "audio/coin.wav");
 			this.load.audio("bac", "audio/supermariobros.mp3");
 			this.load.audio("jump", "audio/jump.wav");
+			this.load.audio("stomp", "audio/stomp.wav");
 
 
 		}
@@ -97,6 +98,7 @@ body {
 			cursors = game.input.keyboard.createCursorKeys();
 			game.jumpSnd = game.add.audio('jump');
 			game.coinSnd = game.add.audio('coin');
+			game.stompSnd = game.add.audio('stomp');
 			game.bacSnd = game.add.audio('bac');
             		game.bacSnd.play();
 
@@ -162,6 +164,8 @@ body {
 				goomba.frame = 2;
 				goomba.body.enable = false;
 				player.body.velocity.y = -80;
+				game.stompSnd.play();
+
 				game.time.events.add(Phaser.Timer.SECOND, function() {
 					goomba.kill();
 				});
