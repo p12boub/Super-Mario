@@ -19,6 +19,13 @@ body {
 			create : create,
 			update : update
 		}, false, false);
+		
+		var score = 0;
+		var life = 3;
+		var bonus = 0;
+		var tscore;
+		var tlife;
+		var tbonus;
 
 		function preload() {
 
@@ -35,6 +42,8 @@ body {
 
 			this.load.tilemap('level', 'assets/MyMap.json', null,
 					Phaser.Tilemap.TILED_JSON);
+			this.load.audio("coin", "audio/coin.wav");
+
 		}
 
 		function create() {
@@ -83,6 +92,7 @@ body {
 			game.camera.follow(player);
 
 			cursors = game.input.keyboard.createCursorKeys();
+			game.coinSnd = game.add.audio('coin');
 			tscore = game.add.text(16,16,'SCORE : 0',{fontSize:'8px', fill:'#FFFF00'});
             		tbonus = game.add.text(76,16,'BONUS : 0 ',{fontSize:'8px', fill:'#FFFF00'});
 			tlife = game.add.text(136,16,'LIVES : 3',{fontSize:'8px', fill:'#FFFF00'});
