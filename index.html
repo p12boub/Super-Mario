@@ -43,6 +43,8 @@ body {
 			this.load.tilemap('level', 'assets/MyMap.json', null,
 					Phaser.Tilemap.TILED_JSON);
 			this.load.audio("coin", "audio/coin.wav");
+			this.load.audio("bac", "audio/supermariobros.mp3");
+
 
 		}
 
@@ -93,6 +95,9 @@ body {
 
 			cursors = game.input.keyboard.createCursorKeys();
 			game.coinSnd = game.add.audio('coin');
+			game.bacSnd = game.add.audio('bac');
+            		game.bacSnd.play();
+
 			tscore = game.add.text(16,16,'SCORE : 0',{fontSize:'8px', fill:'#FFFF00'});
             		tbonus = game.add.text(76,16,'BONUS : 0 ',{fontSize:'8px', fill:'#FFFF00'});
 			tlife = game.add.text(136,16,'LIVES : 3',{fontSize:'8px', fill:'#FFFF00'});
