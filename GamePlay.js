@@ -1,4 +1,4 @@
-
+var GamePlay = {
 	function create() {
 			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
 			game.scale.pageAlignHorizontally = true;
