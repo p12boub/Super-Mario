@@ -19,14 +19,12 @@ body {
 	
 	<script type="text/javascript">
 		
-		var game = new Phaser.Game(256, 240, Phaser.CANVAS, '', {
-			game.state.add('arxiki',arxiki);
+		var game = new Phaser.Game(256, 240, Phaser.CANVAS, '', this, false, false); 
+			game.state.add('arxiki', arxiki);
 			game.state.add('GamePlay', GamePlay);
 			game.state.start('arxiki');
-			preload : preload,
-			create : create,
-			update : update
-		}, false, false);
+			
+		
 		
 		var score = 0;
 		var life = 3;
