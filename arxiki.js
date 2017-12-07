@@ -12,7 +12,15 @@ var arxiki= {
 		var background=game.add.sprite(0,0,'backg');
 		
 
-		var button1 = game.add.button(110 , 150, "level1")
+		var button1 = game.add.button(110 , 150, "level1", function(){
+
+			
+			localStorage.setItem("level", 1);
+			currentMap = parseInt(localStorage.getItem("level"));
+
+			map = game.add.tilemap('level1');
+			game.state.start('GamePlay');
+		});
 		button1.anchor.set(0.5, 0.5);
 		
 
