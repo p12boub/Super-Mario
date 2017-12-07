@@ -1,4 +1,5 @@
-function create() {
+var MainMenu = {
+	function create() {
 			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
 			game.scale.pageAlignHorizontally = true;
 			game.scale.pageAlignVertically = true
