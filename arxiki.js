@@ -12,8 +12,11 @@ var arxiki= {
 		var background=game.add.sprite(0,0,'backg');
 		
 
-		var button1 = game.add.button(110, 100, "level1");
+		var button1 = game.add.button(110, 100, "level1", function(){
+			game.state.start('index');
+		});
 		button1.anchor.set(0.5, 0.5);
+		
 
 	}
 }
