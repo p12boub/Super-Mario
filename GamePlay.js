@@ -16,6 +16,8 @@ function preload() {
 			this.load.audio("stomp", "audio/stomp.wav");
 		}
 		function create() {
+			music = game.add.audio('supermariobros');
+				music.play();
 			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
 			game.scale.pageAlignHorizontally = true;
 			game.scale.pageAlignVertically = true
