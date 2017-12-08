@@ -13,13 +13,14 @@ body {
 <script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"></script>
 </head>
 <body>
+	<script src="GamePlay.js"></script>
 	<script src="arxiki.js"></script>
 	<script type="text/javascript">
-		var game = new Phaser.Game(256, 240, Phaser.CANVAS, '', {
+		var game = new Phaser.Game(256, 240, Phaser.CANVAS, '', /*{
 			preload : preload,
 			create : create,
 			update : update
-		}, false, false);
+		}, false, false);*/
 		
 		
 
@@ -36,7 +37,7 @@ var score = 0;
 		var tlife;
 		var tbonus;
 		game.state.add('arxiki',arxiki);
-		game.state.add('GamePlay',Gameplay);
+		game.state.add('GamePlay',GameΠlay);
 		game.state.start('arxiki');
 		/*
 		function create() {
