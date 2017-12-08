@@ -18,8 +18,8 @@ preload: function() {
 			var menuPic = game.add.sprite(0, 0, 'arxiki');
 
 			
-			var click1 = game.add.button(110, 150, 'Level1', function() {
-			game.state.start('level1'); 	
+			var click1 = game.add.button(110, 150, 'λevel1', function() {
+			game.state.start('GamePlay'); 	
 			supermariobros.stop();
 		});
 		click1.anchor.set(0.5, 0.5);
