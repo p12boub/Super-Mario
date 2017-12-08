@@ -11,7 +11,7 @@ function preload() {
 			this.load.tilemap('level', 'assets/MyMap.json', null,
 					Phaser.Tilemap.TILED_JSON);
 			this.load.audio("coin", "audio/coin.wav");
-			this.load.audio("bac", "audio/supermariobros.mp3");
+			this.load.audio("supermariobros", "audio/supermariobros.mp3");
 			this.load.audio("jump", "audio/jump.wav");
 			this.load.audio("stomp", "audio/stomp.wav");
 		}
@@ -57,7 +57,7 @@ function preload() {
 			game.jumpSnd = game.add.audio('jump');
 			game.coinSnd = game.add.audio('coin');
 			game.stompSnd = game.add.audio('stomp');
-			game.bacSnd = game.add.audio('bac');
+			game.bacSnd = game.add.audio('supermariobros');
             		game.bacSnd.play();
 			tscore = game.add.text(16,16,'SCORE : 0',{fontSize:'8px', fill:'#FFFF00'});
             		tbonus = game.add.text(76,16,'BONUS : 0 ',{fontSize:'8px', fill:'#FFFF00'});
