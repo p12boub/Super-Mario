@@ -1,7 +1,7 @@
 var Level1 = {
                  preload: function() {
                     this.load.audio('jumpsound','audio/jump.wav');
-			         	    this.load.audio('housesound','audio/house.mp3');
+			         	    this.load.audio('supermariobros','audio/supermariobros.mp3');
 				            this.load.audio('coinsound','audio/coin.wav');
 				            this.load.audio('stompsound','audio/stomp.wav');
 			      	      this.load.audio('deathsound','audio/death.mp3');
@@ -21,7 +21,7 @@ var Level1 = {
                   
                   
 				  create: function() {
-          music = game.add.audio('housesound');
+          music = game.add.audio('supermariobros');
 				music.play();
 				
 				
@@ -104,8 +104,8 @@ var Level1 = {
 				game.physics.arcade.collide(goombas, layer);
 				game.physics.arcade.overlap(player, goombas, goombaOverlap);
 				game.physics.arcade.overlap(player, coins, coinOverlap);
-				game.physics.arcade.collide(angry, layer);
-				game.physics.arcade.overlap(player, angry,angryOverlap);
+				
+				
 				
 				if (player.body.enable) {
 					
