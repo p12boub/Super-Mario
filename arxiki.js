@@ -15,7 +15,7 @@ preload: function() {
 			game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 			game.physics.startSystem(Phaser.Physics.ARCADE);
 			
-			var menuPic = game.add.sprite(0, 0, 'mariomenu');
+			var menuPic = game.add.sprite(0, 0, 'arxiki');
 
 			
 			var click1 = game.add.button(110, 150, 'level1', function() {
